@@ -72,9 +72,10 @@ header .profile-image {
   border-radius: 50%;
   border: 3px solid white;
   transition: all 0.5s;
+  object-fit: cover;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.5) rotate(-15deg);
 }
 .tag {
   background-color: #efefef;
@@ -195,6 +196,65 @@ figcaption a {
 figcaption a:hover {
   color: cadetblue;
 }
+
+.contact {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #e4e6e8;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  padding: 1.5rem;
+  margin: 1rem;
+  background-color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+form h3 {
+  font-size: 20px;
+}
+
+form label {
+  margin-top: 2rem;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid;
+  margin-top: 15px;
+  color: rgb(135, 134, 134);
+}
+
+.submit {
+  padding: 1rem;
+  text-align: left;
+  width: 50%;
+  border-radius: 6px;
+  background-color: #6ed595e4;
+  color: white;
+}
+
+.intro {
+  background-color: #6ed595e4;
+  padding: 1.5rem;
+  margin: 1rem;
+  text-align: left;
+  color: white;
+}
+
+.intro a {
+  color: white;
+}
+
+.intro a:hover {
+  color: #0399ff;
+}
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
   .flex {
@@ -261,5 +321,24 @@ figcaption a:hover {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
+  }
+
+  .contact {
+    flex-direction: row;
+    padding: 6rem 3rem;
+  }
+  .form-div {
+    width: 100%;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  .intro {
+    margin: 0;
+  }
+  .submit {
+    width: 20%;
   }
 }
